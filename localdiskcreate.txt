@@ -1,0 +1,12 @@
+select disk 0
+clean
+create partition primary size=100
+format quick fs=ntfs label="System"
+assign letter="S"
+active
+create partition primary
+format quick fs=ntfs label="Local Disk"
+assign letter="W"
+select disk 1
+select volume 3
+assign letter="I"
