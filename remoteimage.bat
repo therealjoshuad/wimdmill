@@ -1,4 +1,4 @@
-diskpart /s diskcreate.txt
+diskpart /s remotediskcreate.txt
 set servername=SERVERNAME
 net use Q: "\\%servername%\System Images" /user:USERNAME PASSWORD
 imagex /apply Q:\install.wim 1 W:\
