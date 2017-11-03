@@ -1,8 +1,4 @@
-﻿<#
-A few helpful functions
-
-#>
-
+﻿# A few helpful functions
 
 function GetIPSubnet () {
     $nic = gwmi -computer . -class "win32_networkadapterconfiguration" | Where-Object {$_.defaultIPGateway -ne $null}
